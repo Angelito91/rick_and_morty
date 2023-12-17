@@ -1,3 +1,4 @@
+import LazyLoad from 'react-lazy-load'
 // types
 import { Person, Persons } from '../types'
 
@@ -13,16 +14,18 @@ export function Cards ({ persons, setDetails }: Props) {
       {persons.map(person => {
         return (
           <button
-            className='transition opacity-60 hover:opacity-100 hover:scale-105'
+            className='transition opacity-80 hover:opacity-100 hover:scale-105'
             key={person.id}
             onClick={() => setDetails(person)}
           >
-            <img
-              className='object-cover w-full'
-              src={person.image}
-              alt={person.name}
-            />
-            <p className='p-4 text-xl font-bold text-center text-white bg-gray-700'>
+            <LazyLoad>
+              <img
+                className='w-full h-full'
+                src={person.image}
+                alt={person.name}
+              />
+            </LazyLoad>
+            <p className='p-4 text-xl font-bold text-center text-white bg-sky-900'>
               {person.name}
             </p>
           </button>

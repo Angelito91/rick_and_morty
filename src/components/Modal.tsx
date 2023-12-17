@@ -15,9 +15,9 @@ export function Modal ({ details, setDetails }: Props) {
     cleanData({ details })
 
   return (
-    <div className='fixed top-0 left-0 flex flex-col items-center justify-start w-full h-full gap-10 p-0 sm:p-20 sm:justify-between sm:flex-row bg-slate-900'>
+    <div className='fixed top-0 left-0 flex flex-col items-center justify-start w-screen h-screen gap-10 p-0 sm:p-20 sm:justify-between sm:flex-row bg-slate-900'>
       <button
-        className='absolute text-white top-3 sm:right-1/2'
+        className='absolute top-0 text-white sm:top-3 sm:right-1/2'
         onClick={() => setDetails(undefined)}
       >
         <svg
@@ -30,27 +30,27 @@ export function Modal ({ details, setDetails }: Props) {
           <path d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z' />
         </svg>
       </button>
-      <div className='mt-24 sm:w-1/2'>
+      <div className='mt-16 sm:w-1/2'>
         <img className='sm:w-3/4' src={image} alt={name} />
       </div>
-      <div className='grid grid-cols-2 gap-20 sm:w-1/2'>
-        <h1 className='col-span-2 text-5xl font-bold text-center text-orange-500'>
+      <div className='grid grid-cols-2 gap-5 sm:gap-20 sm:w-1/2'>
+        <h1 className='col-span-2 text-3xl font-bold text-center text-orange-500 sm:text-5xl'>
           {name}
         </h1>
         <div className='text-center text-white'>
-          <h3 className='text-3xl font-bold'>URL</h3>
+          <h3 className='text-xl font-bold sm:text-3xl'>URL</h3>
           <a
             href={url}
             target='_blank'
-            className='w-1/2 mt-3 text-xl text-sky-400'
+            className='w-1/2 mt-3 text-md sm:text-xl text-sky-400'
           >
             Api/{name}
           </a>
         </div>
         <div className='text-center text-white'>
-          <h3 className='text-3xl font-bold'>Estatus</h3>
+          <h3 className='text-xl font-bold sm:text-3xl'>Estatus</h3>
           <p
-            className={`mt-3 text-xl ${
+            className={`mt-3 text-md sm:text-xl ${
               status === 'Alive' ? 'text-emerald-500' : 'text-red-500'
             }`}
           >
@@ -58,20 +58,20 @@ export function Modal ({ details, setDetails }: Props) {
           </p>
         </div>
         <div className='text-center text-white'>
-          <h3 className='text-3xl font-bold'>Género</h3>
-          <p className='mt-3 text-xl'>{gender}</p>
+          <h3 className='text-xl font-bold sm:text-3xl'>Género</h3>
+          <p className='mt-3 text-md sm:text-xl'>{gender}</p>
         </div>
         <div className='text-center text-white'>
-          <h3 className='text-3xl font-bold'>Especie</h3>
-          <p className='mt-3 text-xl'>{species}</p>
+          <h3 className='text-xl font-bold sm:text-3xl'>Especie</h3>
+          <p className='mt-3 text-md sm:text-xl'>{species}</p>
         </div>
         <div className='text-center text-white'>
-          <h3 className='text-3xl font-bold'>Origen</h3>
-          <p className='mt-3 text-xl'>{origin}</p>
+          <h3 className='text-xl font-bold sm:text-3xl'>Origen</h3>
+          <p className='mt-3 text-md sm:text-xl'>{origin}</p>
         </div>
         <div className='text-center text-white'>
-          <h3 className='text-3xl font-bold'>Localidad</h3>
-          <p className='mt-3 text-xl'>{location}</p>
+          <h3 className='text-xl font-bold sm:text-3xl'>Localidad</h3>
+          <p className='mt-3 text-md sm:text-xl'>{location}</p>
         </div>
       </div>
     </div>

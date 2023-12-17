@@ -15,13 +15,9 @@ function App () {
   const [details, setDetails] = useState<Person | undefined>(undefined)
 
   return (
-    <main
-      className={`flex flex-col items-center min-h-screen bg-slate-950 ${
-        details !== undefined ? 'overflow-hidden' : ''
-      }`}
-    >
+    <main className='flex flex-col items-center min-h-screen bg-slate-950'>
       <header className='p-5'>
-        <h1 className='font-mono text-4xl text-center text-orange-600 animate-pulse sm:text-6xl'>
+        <h1 className='font-serif text-4xl text-center text-orange-600 sm:text-6xl'>
           Rick and Morty
         </h1>
       </header>

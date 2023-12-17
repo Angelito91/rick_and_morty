@@ -2,7 +2,7 @@
 
 ## Web https://angelito91.github.io/rick_and_morty/
 
-### tecnologías
-- React
-- TypeScript
-- Tailwindcss
+### 📌 tecnologías
+- React 💊
+- TypeScript ⚡
+- Tailwindcss ⭐
